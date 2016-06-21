@@ -4,9 +4,9 @@
       <div class="item-box">
         <div class="image">
           <div class="img-wrap">
-            <% @image=item['mediumImageUrls'].first['imageUrl'].gsub('?_ex=128x128','') %>
-            <% if @image.present? %>
-              <%= image_tag(@image, alt: item['itemName']) %>
+            <% image=item['mediumImageUrls'].first['imageUrl'].gsub('?_ex=128x128','') %>
+            <% if image.present? %>
+              <%= image_tag(image, alt: item['itemName']) %>
             <% else %>
               <%= image_tag("no-image.png" , alt: item['itemName']) %>
             <% end %>
