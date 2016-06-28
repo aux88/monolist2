@@ -1,0 +1,25 @@
+<div class="ranking">
+    <div class="title">
+        <h1>Wantランキング</h1>
+    </div>
+    <div class="container">
+        <table class="table">
+            <thead>
+          <tr>
+            <th>#</th>
+            <th>タイトル</th>
+            <th>Want数</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @want_items.each.with_index(1) do |(key, value), index| %> 
+          <tr>
+            <th scope="row"><%= index %></th>
+              <td><%= @items.find(key).title %></td>
+              <td><%= value %></td>
+          </tr>
+          <% end %>
+        </tbody>
+        </table>
+    </div>
+</div>
